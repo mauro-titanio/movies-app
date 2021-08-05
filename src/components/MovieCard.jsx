@@ -5,7 +5,7 @@ export function MovieCard({ movie }) {
   return (
     <Link to={"/movie/" + movie.id}>
       <div className="card text-center pb-0 rounded rounded-3 border-0 bg-dark h-auto">
-        <img src={imageUrl} alt={movie.title} className="rounded-top" />
+        <img width="200px" height="300px" src={imageUrl} alt={movie.title} className="rounded rounded-3 bg-body" />
         <div className="container">
           <small>{movie.title}</small>
         </div>

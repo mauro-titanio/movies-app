@@ -14,11 +14,11 @@ function App() {
         </header>
         <main>
           <Switch>
-            <Route exact path="/">
-              <LandingPage />
-            </Route>
             <Route exact path="/movie/:movieId">
               <MovieDetails />
+            </Route>
+            <Route path="/">
+              <LandingPage />
             </Route>
           </Switch>
         </main>
