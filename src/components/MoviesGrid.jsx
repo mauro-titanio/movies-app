@@ -1,9 +1,16 @@
-import movies from "../movies.json";
+import { useEffect, useState } from "react";
+import { httpGet } from "../utils/httpClient";
 import { MovieCard } from "./MovieCard";
-import styles from "./MoviesGrid.module.css"
+import styles from "./MoviesGrid.module.css";
 export function MoviesGrid() {
-  
-  console.log(movies);
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    httpGet("/discover/movie").then((data) => {
+      setMovies(data.results);
+    });
+  }, []);
+
   return (
     <ul className={styles.moviesGrid}>
       {movies.map((movie) => (
