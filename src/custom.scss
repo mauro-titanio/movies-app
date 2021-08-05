@@ -1,0 +1,15 @@
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+a {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+}
+
+a:hover {
+    color: white;
+    opacity: 0.2 !important;
+}
+
+.text-justify {
+    text-align: justify;
+}
